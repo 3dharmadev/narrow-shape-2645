@@ -6,6 +6,8 @@ import narrow_shape_2645.Exception.EmployeeException;
 import narrow_shape_2645.Exception.EngineerException;
 import narrow_shape_2645.POJO.Engineer;
 
+import java.util.Random;
+
 public class Check_ {
     public static void main(String[] args) {
         Dao_Interface dao = new Dao_Implements();
@@ -35,18 +37,52 @@ public class Check_ {
 
 
 //        Engineer engineer=new Engineer();
-//        engineer.setUsername("dbsatapathy@gmail.com");
+//        engineer.setUsername("sbsatapathy@gmail.com");
 //        engineer.setPassword(1234);
-//        engineer.setType("SOFTWARE");
+//        engineer.setType("HARDWARE");
 //        try {
 //            System.out.println(dao.register_Engineer(engineer));
 //        } catch (EngineerException e) {
 //            System.out.println(e.getMessage());
 //        }
 
+//        Random rnd = new Random();
+//        int number = rnd.nextInt(9999999);
+//
+//        System.out.println(number);
 
+//        try {
+//            System.out.println(dao.Assign_Complain_To_Engineer("sbsatapathy@gmail.com",1));
+//        } catch (EngineerException e) {
+//            System.out.println(e.getMessage());
+//        }
+//
+//        try {
+//            System.out.println(dao.all_Raised_Complains());
+//        } catch (EmployeeException e) {
+//            System.out.println(e.getMessage());
+//        }
 
+//        try {
+//            System.out.println(dao.list_Of_Engineers());
+//        } catch (EngineerException e) {
+//            System.out.println(e.getMessage());
+//        }
 
+        //System.out.println(dao.list_Of_Complains_MapTo_Engineer("deba@gmail.com"));
+
+    //    System.out.println(dao.open_Complains("sbsatapathy@gmail.com"));
+
+//        try {
+//            System.out.println(dao.update_Status(100,"70% completed"));
+//        } catch (EmployeeException e) {
+//            System.out.println(e.getMessage());
+//        }
+        try {
+            System.out.println(dao.delete_Engineer("sbsatapathy@gmail.com"));
+        } catch (EngineerException e) {
+            System.out.println(e.getMessage());
+        }
 
     }
 }

@@ -2,18 +2,18 @@ package narrow_shape_2645.POJO;
 
 public class Engineer {
 
-    private String username;
+    private String email;
     private int password;
 
     private  String Type;
 
 
-    public String getUsername() {
-        return username;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setEmail(String username) {
+        this.email = username;
     }
 
     public int getPassword() {
@@ -35,7 +35,7 @@ public class Engineer {
     @Override
     public String toString() {
         return "Engineer{" +
-                "username='" + username + '\'' +
+                "username='" + email + '\'' +
                 ", password=" + password +
                 '}';
     }
