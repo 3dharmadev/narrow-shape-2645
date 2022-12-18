@@ -14,7 +14,7 @@ This is the query resolve system helps any organisation to listen to their emplo
     
     Sample screenshot of HOD working console:
     
-    https://user-images.githubusercontent.com/69399810/208312345-941e2d8f-1239-4fe6-a382-124f9c377e42.png
+    ![Screenshot (272)](https://user-images.githubusercontent.com/69399810/208312345-941e2d8f-1239-4fe6-a382-124f9c377e42.png)
 
     Tasks of engineer -:
     Able to see new assigned complains by HOD. 
