@@ -9,6 +9,12 @@ Technogies used: Core Java, JDBC, MYSQL
 
 This Project was completely build from scratch by me(3dharmadev).
 
-
-     
+ Features
+    Tasks of HOD(Head of department)-: 
+    HOD can register any new engineer.
+    Able see all registered engineer. 
+    Able to delete an engineer. 
+    Able to see all raised problem. 
+    Able to assign raised problem an engineer.
     
+![Screenshot (272)] (https:user-images.githubusercontent.com/69399810/208312345-941e2d8f-1239-4fe6-a382-124f9c377e42.png)
