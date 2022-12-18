@@ -1,0 +1,40 @@
+desc complain;
++-----------------+-------------+------+-----+---------+-------+
+| Field           | Type        | Null | Key | Default | Extra |
++-----------------+-------------+------+-----+---------+-------+
+| complainId      | int(11)     | NO   | PRI | NULL    |       |
+| complainType    | char(15)    | YES  |     | NULL    |       |
+| complainDetails | varchar(80) | YES  |     | NULL    |       |
+| status          | varchar(20) | YES  |     | NULL    |       |
+| raisedBy        | varchar(30) | YES  |     | NULL    |       |
+| solveBy         | varchar(30) | YES  | MUL | NULL    |       |
++-----------------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> desc engineer;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| email    | varchar(30) | NO   | PRI | NULL    |       |
+| password | int(11)     | NO   |     | NULL    |       |
+| Type     | varchar(10) | NO   |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> desc employee;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| username | varchar(20) | NO   | PRI | NULL    |       |
+| password | int(11)     | NO   |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> desc HOD;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| username | varchar(12) | YES  |     | NULL    |       |
+| password | int(11)     | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+2 rows in set (0.24 sec)
