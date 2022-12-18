@@ -71,7 +71,7 @@ public class Dao_Implements implements narrow_shape_2645.Dao_Classes_and_Interfa
         String message="Unable to register...";
 
 
-        if(username.contains("@gmail.com"))
+        if(!username.contains("@gmail.com")){ message="Does not contains @gmail.com"; return message;}
 
         try (Connection conn= DB_Connect.getConnection()){
 
@@ -251,7 +251,7 @@ public class Dao_Implements implements narrow_shape_2645.Dao_Classes_and_Interfa
 | raisedby        | varchar(20) | NO   |     | NULL    |       |
 | solveby         | varchar(30) | YES  | MUL | NULL    |*/
         try(Connection conn=DB_Connect.getConnection()){
-            PreparedStatement ps=conn.prepareStatement("select * from complain where complainStatus!='NULL' AND solveby=?");
+            PreparedStatement ps=conn.prepareStatement("select * from complain where status!='NULL' AND solveby=?");
 
             ps.setString(1,email);
             ResultSet rs=ps.executeQuery();
@@ -262,7 +262,7 @@ public class Dao_Implements implements narrow_shape_2645.Dao_Classes_and_Interfa
                 raisedComplain.setComplainDetails(rs.getString("complainDetails"));
                 raisedComplain.setRaisedBy(rs.getString("raisedby"));
                 raisedComplain.setSolveBy(rs.getString("solveby"));
-
+                  raisedComplain.setStatus(rs.getString("status"));
                 list.add(raisedComplain);
             }
         }
@@ -368,7 +368,7 @@ public class Dao_Implements implements narrow_shape_2645.Dao_Classes_and_Interfa
         String message="complainId is wrong..!";
 
         try(Connection conn=DB_Connect.getConnection()) {
-            PreparedStatement ps= conn.prepareStatement("update  complain set complainStatus=? where complainid=?");
+            PreparedStatement ps= conn.prepareStatement("update  complain set status=? where complainid=?");
             ps.setString(1,updateMessage);
             ps.setInt(2,complainId);
 
@@ -387,7 +387,7 @@ public class Dao_Implements implements narrow_shape_2645.Dao_Classes_and_Interfa
     public String Update_Password_Engineer(String username, int password,int new_Password) throws EngineerException {
         String message = "Wrong name..!";
 
-        try (Connection conn =  JDBC_Conn.Set_Connection()) {
+        try (Connection conn =  DB_Connect.getConnection()) {
 
             PreparedStatement ps = conn.prepareStatement("update engineer set password=? where email=? and password=?");
 
@@ -412,7 +412,7 @@ public class Dao_Implements implements narrow_shape_2645.Dao_Classes_and_Interfa
     public String Update_Password_Employee(String username, int password,int new_Password) throws EmployeeException {
         String message = "Wrong name..!";
 
-        try (Connection conn =  JDBC_Conn.Set_Connection()) {
+        try (Connection conn =  DB_Connect.getConnection()) {
 
             PreparedStatement ps = conn.prepareStatement("update employee set password=? where username=? and password=?");
 
@@ -436,7 +436,7 @@ public class Dao_Implements implements narrow_shape_2645.Dao_Classes_and_Interfa
     public RaisedComplain check_Complain_Status(int complainId,String username) throws EmployeeException {
         RaisedComplain raisedComplain=new RaisedComplain();
 
-        try (Connection conn =  JDBC_Conn.Set_Connection()) {
+        try (Connection conn =  DB_Connect.getConnection()) {
 
             PreparedStatement ps = conn.prepareStatement("select * from complain where complainid=? and raisedby=?");
 
@@ -466,9 +466,10 @@ public class Dao_Implements implements narrow_shape_2645.Dao_Classes_and_Interfa
         String message="Ohh ohh something went wrong..!";
 
         try(Connection conn=DB_Connect.getConnection()){
+            System.out.println("Executing....");
             PreparedStatement ps=conn.prepareStatement("SELECT FLOOR(RAND() * 99999) AS random_num\n" +
-                    "         FROM complain\n" +
-                    " WHERE \"random_num\" NOT IN (SELECT complainID FROM complain)\n" +
+                    "   FROM complain" +
+                    " WHERE  'random_num' NOT IN (SELECT complainID FROM complain)\n" +
                     "         LIMIT 1");
 
 
@@ -476,6 +477,7 @@ public class Dao_Implements implements narrow_shape_2645.Dao_Classes_and_Interfa
             int complainId=0;
             if(rs.next()){
               complainId=  rs.getInt("random_num");
+                System.out.println("Your generated ticket id is "+complainId);
             }
             else return message;
 

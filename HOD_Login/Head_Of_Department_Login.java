@@ -56,11 +56,11 @@ public class Head_Of_Department_Login {
             case 5:assign_Problem();
             case 6:
                 System.out.println("Exiting........");
+                sc.close();
                 System.exit(0);
             default: System.out.println("\nTry again.......");
                 After_Login();
          }
-         sc.close();
     }
 
     public static void register_Engineer(){
@@ -133,9 +133,9 @@ public class Head_Of_Department_Login {
         try {
           List<RaisedComplain> list= dao.all_Raised_Complains();
             for (RaisedComplain com:list) {
-                System.out.println("complainid:"+com.getComplainId()+", complain details:"+com.getComplainDetails()
+                System.out.println("complainid:"+com.getComplainId()+", complain details:"+com.getComplainDetails() +",  status details:"+com.getStatus()
                         +",  problem type:"+com.getComplainType()+
-                       ",  engineer name:"+ com.getSolveBy()+",  employee name:"+com.getRaisedBy()+",  status details:"+com.getStatus()+"\n");
+                       ",  engineer name:"+ com.getSolveBy()+",  employee name:"+com.getRaisedBy()+"\n");
             }
         } catch (EmployeeException e) {
             System.out.println(e.getMessage());
