@@ -69,7 +69,7 @@ public class Check_ {
 //            System.out.println(e.getMessage());
 //        }
 
-         System.out.println(dao.list_Of_Complains_MapTo_Engineer("dbsatapathy@gmail.com"));
+        // System.out.println(dao.list_Of_Complains_MapTo_Engineer("dbsatapathy@gmail.com"));
 
     //    System.out.println(dao.open_Complains("sbsatapathy@gmail.com"));
 
@@ -84,10 +84,28 @@ public class Check_ {
 //            System.out.println(e.getMessage());
 //        }
 
-       // System.out.println(dao.Raise_A_Complain("HARDWARE","the king of universe","rama@gmail.com"));
+       //  System.out.println(dao.Raise_A_Complain("HARDWARE","the king of universe","rama@gmail.com"));
 
        // System.out.println(dao.check_All_Raised_Complain("rama@gmail.com"));
 
+
+//        try {
+//            System.out.println(dao.check_Complain_Status(59000,"k@gmail.com"));
+//        } catch (EmployeeException e) {
+//            System.out.println(e.getMessage());
+//        }
+
+//        try {
+//            System.out.println(dao.update_Status(1,"updated"));
+//        } catch (EmployeeException e) {
+//            System.out.println(e.getMessage());
+//        }
+
+        try {
+            System.out.println(dao.update_Status(1,"newwwwwwwwwwwww"));
+        } catch (EmployeeException e) {
+            System.out.println(e.getMessage());
+        }
 
     }
 }
