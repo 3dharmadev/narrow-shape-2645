@@ -18,3 +18,5 @@ This Project was completely build from scratch by me(3dharmadev).
     Able to assign raised problem an engineer.
     
 ![Screenshot] (https://user-images.githubusercontent.com/69399810/208312345-941e2d8f-1239-4fe6-a382-124f9c377e42.png)
+ ![Screenshot (273)](https://user-images.githubusercontent.com/69399810/208312367-798af41e-0ec9-4389-b849-cb4b05ee0d95.png)
+  ![Screenshot (274)](https://user-images.githubusercontent.com/69399810/208312383-b39093ce-bb11-41fe-bfb6-2b17f7529fd1.png)
