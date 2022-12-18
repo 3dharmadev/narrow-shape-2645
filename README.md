@@ -17,4 +17,4 @@ This Project was completely build from scratch by me(3dharmadev).
     Able to see all raised problem. 
     Able to assign raised problem an engineer.
     
-![Screenshot (272)] (https://user-images.githubusercontent.com/69399810/208312345-941e2d8f-1239-4fe6-a382-124f9c377e42.png)
+![Screenshot] (https://user-images.githubusercontent.com/69399810/208312345-941e2d8f-1239-4fe6-a382-124f9c377e42.png)
