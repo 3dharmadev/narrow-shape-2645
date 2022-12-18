@@ -12,13 +12,7 @@ public class Check_ {
     public static void main(String[] args) {
         Dao_Interface dao = new Dao_Implements();
 
-       // System.out.println(dao.login_HOD(1234,"deba"));
-//        try {
-//            System.out.println(dao.login_Employee("rama@gmail",12345678));
-//        } catch (EmployeeException e) {
-//            System.out.println(e.getMessage());
-//        }
-
+   
 
 
 
